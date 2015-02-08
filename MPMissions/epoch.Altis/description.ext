@@ -38,6 +38,12 @@ wreckRemovalMaxTime = 360;
 
 class CfgRemoteExecCommands {};
 
+class RscTitles
+{
+
+#include "dialog\statusBar.hpp"
+};
+
 class cfgMusic
 {
     class intro

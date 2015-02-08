@@ -12,9 +12,26 @@ if (!isDedicated) then {
 		VEMFChatMsg = nil;
 	};
 };
+
+//Status Bar
+[] execVM "custom\fn_statusBar.sqf"; 
+
 // Welcome Credits
 [] execVM "custom\welcome.sqf";
 
 //Admin Menu
 execVM "adminmenu\activate.sqf";
 execVM "adminmenu\loop.sqf";
+
+//BIKE
+act = player addaction [("<t color=""#0074E8"">" + ("Bike") +"</t>"),"custom\Bike.sqf","",5,false,true,"",""];
+
+//Loadouts
+[] execVM "custom\loadout.sqf";
+
+//Custom LOOT
+if (isServer) then {
+    fn_getBuildingstospawnLoot = compile preProcessFileLineNumbers "custom\LSpawner\fn_LSgetBuildingstospawnLoot.sqf";
+    LSdeleter = compile preProcessFileLineNumbers "custom\LSpawner\LSdeleter.sqf";
+    execVM "custom\LSpawner\Lootspawner.sqf";
+};
