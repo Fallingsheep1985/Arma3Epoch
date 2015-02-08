@@ -7,6 +7,7 @@ custom loot - DONE
 packable bike - DONE
 custom startup loadout - DONE
 
+plot for life - INCLUDED IN EPOCH
 single currency - INCLUDED IN EPOCH
 snapbuild  - INCLUDED IN EPOCH
 
@@ -21,7 +22,7 @@ rearm/refuel/repair
 What I call 'One of the Gang' or Hero/Bandit mission non-aggro. 
 added mosquitoe heli to hero/bandit traders (guns active/no missiles)
 added AH-6 to hero/bandit (guns active/ missiles disabled)
-plot for life 
+
 
 Server time rotation - 3 hour restarts with 12AM & 12PM moon lit nights
 auto database backups

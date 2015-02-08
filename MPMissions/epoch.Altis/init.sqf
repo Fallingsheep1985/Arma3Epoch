@@ -1,3 +1,5 @@
+//Admin list
+ADMIN_LIST = ["76561198087015545","0","0"]
 //VEMF Missions
 if (!isDedicated) then {
 	"VEMFChatMsg" addPublicVariableEventHandler {

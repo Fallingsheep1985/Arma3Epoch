@@ -1,6 +1,6 @@
 waituntil {!alive player ; !isnull (finddisplay 46)};
-if ((getPlayerUID player) in ["76561198083039115"]) then {
+if ((getPlayerUID player) in [ADMIN_LIST]) then {
 ;
-act = player addaction [("<t color=""#0074E8"">" + ("Tools Menu") +"</t>"),"adminmenu\tools.sqf","",5,false,true,"",""];
+act = player addaction [("<t color=""#0074E8"">" + ("Admin Menu") +"</t>"),"adminmenu\tools.sqf","",5,false,true,"",""];
 
 };
