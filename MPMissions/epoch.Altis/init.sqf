@@ -25,7 +25,12 @@ execVM "adminmenu\loop.sqf";
 
 //BIKE
 act = player addaction [("<t color=""#0074E8"">" + ("Bike") +"</t>"),"custom\Bike.sqf","",5,false,true,"",""];
-
+//Pack BIKE
+_target = cursorTarget;
+_isbike = _target isKindOf "ebike_epoch";
+if (_isbike) then{
+	player addaction [("<t color=""#0074E8"">" + ("PackBike") +"</t>"),"custom\packbike2.sqf","",5,false,true,"",""];
+};
 //Loadouts
 [] execVM "custom\loadout.sqf";
 
