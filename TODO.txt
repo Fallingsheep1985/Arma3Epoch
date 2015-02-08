@@ -6,6 +6,7 @@ missions - DONE
 custom loot - DONE
 packable bike - DONE
 custom startup loadout - DONE
+craft-able lil' bird - DONE
 
 plot for life - INCLUDED IN EPOCH
 single currency - INCLUDED IN EPOCH
@@ -15,7 +16,6 @@ self bb - NOT NEEDED
 
 
 supply drops (medical/building supplies/gold/guns)
-craft-able lil' bird
 slightly modded damage to strengthen helis
 
 rearm/refuel/repair
