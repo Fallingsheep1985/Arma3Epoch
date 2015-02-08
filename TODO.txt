@@ -4,7 +4,7 @@ loading screen - DONE
 Credits/intro menu - DONE
 missions - DONE
 custom loot - DONE
-packable bike - DONE - NEED EDIT
+packable bike - DONE
 custom startup loadout - DONE
 
 single currency - INCLUDED IN EPOCH
@@ -14,7 +14,7 @@ self bb - NOT NEEDED
 
 
 supply drops (medical/building supplies/gold/guns)
- craft-able lil' bird
+craft-able lil' bird
 slightly modded damage to strengthen helis
 
 rearm/refuel/repair
