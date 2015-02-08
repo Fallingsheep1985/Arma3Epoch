@@ -37,3 +37,12 @@ wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
 
 class CfgRemoteExecCommands {};
+
+class cfgMusic
+{
+    class intro
+    {
+        name = "intro";
+        sound[] = {"sounds\IntroSong.ogg", db+1,1};
+    };
+};
