@@ -1,19 +1,6 @@
 //Admin list
-ADMIN_LIST = ["76561198087015545","0","0"]
-//VEMF Missions
-if (!isDedicated) then {
-	"VEMFChatMsg" addPublicVariableEventHandler {
-		systemChat ((_this select 1) select 0);
-		[
-			[
-				[((_this select 1) select 0),"align = 'center' size = '1' font='PuristaBold'"],
-				["","<br/>"],
-				[((_this select 1) select 1),"align = 'center' size = '0.5'"]
-			]
-		] spawn BIS_fnc_typeText2;
-		VEMFChatMsg = nil;
-	};
-};
+ADMIN_LIST = ["76561198087015545","0","0"];
+
 
 //Status Bar
 [] execVM "custom\fn_statusBar.sqf"; 
@@ -50,4 +37,21 @@ _target = cursorTarget;
 _isbike = _target isKindOf "ebike_epoch";
 if (_isbike) then{
 	player addaction [("<t color=""#0074E8"">" + ("PackBike") +"</t>"),"custom\packbike2.sqf","",5,false,true,"",""];
+};
+//SEM Missions
+if(hasInterface)then{execVM "semClient.sqf"};
+
+//VEMF Missions
+if (!isDedicated) then {
+	"VEMFChatMsg" addPublicVariableEventHandler {
+		systemChat ((_this select 1) select 0);
+		[
+			[
+				[((_this select 1) select 0),"align = 'center' size = '1' font='PuristaBold'"],
+				["","<br/>"],
+				[((_this select 1) select 1),"align = 'center' size = '0.5'"]
+			]
+		] spawn BIS_fnc_typeText2;
+		VEMFChatMsg = nil;
+	};
 };
