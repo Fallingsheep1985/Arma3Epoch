@@ -3,16 +3,20 @@ indestructible bases - DONE
 loading screen - DONE
 Credits/intro menu - DONE
 missions - DONE
+custom loot - DONE
+packable bike - DONE - NEED EDIT
+custom startup loadout - DONE
+
 single currency - INCLUDED IN EPOCH
 snapbuild  - INCLUDED IN EPOCH
 
+self bb - NOT NEEDED
 
-custom startup loadout
-self bb
+
 supply drops (medical/building supplies/gold/guns)
-packable bike & craft-able lil' bird
+ craft-able lil' bird
 slightly modded damage to strengthen helis
-custom loot - more guns!
+
 rearm/refuel/repair
 What I call 'One of the Gang' or Hero/Bandit mission non-aggro. 
 added mosquitoe heli to hero/bandit traders (guns active/no missiles)
