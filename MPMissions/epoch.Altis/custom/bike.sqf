@@ -2,6 +2,7 @@
 
  
     //Script created by Bakler2
+	//edited by falling sheep to makechopper
   
  if ("ItemScraps" in magazines player) then{
 	if ("ToolKit" in magazines player) then{
@@ -21,10 +22,10 @@
 		player playActionNow "Medic";
 		 
 		sleep 3;
-		cutText [format["You built a Bike."], "PLAIN DOWN"];
+		cutText [format["You built a EBike."], "PLAIN DOWN"];
 	} else {
-		SystemChat "You need a Toolkit to build a bike Bike."; 
+		SystemChat "You need a Toolkit to build a EBike."; 
 	}; 
 } else {
-	SystemChat "You need one Scrap to build a Bike."; 
+	SystemChat "You need Scrap to build a EBike."; 
 };

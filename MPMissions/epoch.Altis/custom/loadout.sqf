@@ -15,6 +15,7 @@ if (!isServer) then {
 				player addWeapon "NVG_EPOCH";
 				player addWeapon "EpochRadio0";
 				player addWeapon "ItemMap";
+				player addWeapon "Toolkit";
 				player addWeapon "optic_tws_mg";
 				player addWeapon "muzzle_snds_B";
 				player addWeapon "ItemGPS";
@@ -55,7 +56,7 @@ if (!isServer) then {
 				player addItemToBackpack "MeleeSledge";
 				player addItemToBackpack "Hatchet";
 				player forceAddUniform "U_O_GhillieSuit";
-				EPOCH_playerCrypto = 30000;
+				EPOCH_playerCrypto = 3000;
 			} else {
 				player addWeapon "EpochRadio0"; 
 				player addWeapon "ItemMap";
