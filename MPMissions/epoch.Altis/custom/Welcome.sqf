@@ -95,3 +95,4 @@ player enableSimulation true;
     [ _m, [_pX * safeZoneW + safeZoneX, _pW], [_pY * safezoneH + safezoneY, 1 * safezoneH + safezoneY], _tm, _FadeIn ] spawn BIS_fnc_dynamicText;
     sleep (_tm+_FadeIn+4);
 } forEach _ms;
+diag_log format ["WELCOME: Welcome credits loaded", player];

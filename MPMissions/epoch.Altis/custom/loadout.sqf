@@ -1,3 +1,4 @@
+diag_log format ["LOADOUT: Loading...", player];
 if (!isServer) then {
 	waitUntil {!isNull player};
 	waitUntil {player == player};
@@ -5,7 +6,7 @@ if (!isServer) then {
 	while {true} do {
 		_player = player;
 		player addEventHandler ["Respawn", {
-			if (getPlayerUID player in ["0"]) then {
+			if (getPlayerUID player in SUPERADMIN_LIST) then {
 				player addWeapon "srifle_EBR_F";
 				player addWeapon "hgun_Pistol_heavy_01_F";
 				player addWeapon "RPG32_F";
@@ -57,7 +58,9 @@ if (!isServer) then {
 				player addItemToBackpack "Hatchet";
 				player forceAddUniform "U_O_GhillieSuit";
 				EPOCH_playerCrypto = 3000;
-			} else {
+			}; 
+			//Default loadout
+			if !(getPlayerUID player in MASTERADMIN_LIST) then {
 				player addWeapon "EpochRadio0"; 
 				player addWeapon "ItemMap";
 				player addWeapon "hgun_Pistol_heavy_01_F";
@@ -68,3 +71,4 @@ if (!isServer) then {
 		waitUntil {_player != player};
 	};
 };
+diag_log format ["LOADOUT: loaded.", player];

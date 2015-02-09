@@ -1,4 +1,5 @@
 	/* KiloSwiss */
+	diag_log format ["SEM: client loading...", player];
 if(isDedicated)exitWith{}; //Everything below this line is only executed on the client (player or local host)
 
 [] spawn {	waitUntil{player == player && !isNil "SEM_version"}; sleep 50;
@@ -125,5 +126,6 @@ SEM_lastEvent = 0;
 		}forEach _units;
 	};
 };
+diag_log format ["SEM: client loaded.", player];
 //if(!isNil "SEM_AIsniperDamageEH")then{SEM_AI_Units call SEM_client_AIaddDamageEH};
 //"SEM_AI_Units" addPublicVariableEventHandler {_this select 1 call SEM_client_AIaddDamageEH};

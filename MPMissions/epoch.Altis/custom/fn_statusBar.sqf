@@ -1,3 +1,4 @@
+diag_log format ["STATUS BAR: Loading...", player];
 waitUntil {!(isNull (findDisplay 46))};
 disableSerialization;
 /*
@@ -42,3 +43,4 @@ systemChat format["statusBar Loading player info...", _rscLayer];
 		((uiNamespace getVariable "osefStatusBar")displayCtrl 1000)ctrlSetText format["FPS: %1 | PLAYERS: %2 | DAMAGE: %3 | KRYPTO: %4 | HUNGER: %5 | THIRST: %6 | GRIDREF: %7 | RESTART IN: %8:%9", round diag_fps, count playableUnits, damage player, EPOCH_playerCrypto, EPOCH_playerHunger, EPOCH_playerThirst, mapGridPosition player, _hours, _minutes, _counter];
 	}; 
 };
+diag_log format ["STATUS BAR: Loaded.", player];
