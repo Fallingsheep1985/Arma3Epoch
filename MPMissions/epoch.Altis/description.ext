@@ -37,11 +37,20 @@ wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
 
 class CfgRemoteExecCommands {};
-
+class RscPicture 
+{
+	type = CT_STATIC;
+	idc = -1;
+	style = 48;
+	colorBackground[] = {0, 0, 0, 0};
+	colorText[] = {1, 1, 1, 1};
+	font = "PuristaMedium"; //Typeface
+	sizeEx = 0;
+};
 class RscTitles
 {
-
-#include "dialog\statusBar.hpp"
+	#include "=BTC=_Logistic\=BTC=_Lift\=BTC=_Hud.h"
+	#include "dialog\statusBar.hpp"
 };
 
 class cfgMusic

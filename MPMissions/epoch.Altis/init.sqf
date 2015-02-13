@@ -21,6 +21,10 @@ BANNED_LIST = [
 	"76561197971107759","76561197967087500","76561197995117205","76561197964338716","76561198128229370","76561198141766032","76561198131838128",
 	"76561198037171839","76561198137119508","76561198077957452","76561198055161991","76561198089299178","76561198129631838"
 ];
+//BTC Lift,cargo and fast rope
+_logistic = execVM "=BTC=_Logistic\=BTC=_logistic_Init.sqf";
+
+
 //Status Bar
 [] execVM "custom\fn_statusBar.sqf"; 
 
@@ -29,7 +33,7 @@ BANNED_LIST = [
 
 //Admin Menu
 [] execVM "adminmenu\run.sqf";
-
+[] execVM "adminmenu\loop.sqf";
 
 //Loadouts
 [] execVM "custom\loadout.sqf";
@@ -40,7 +44,11 @@ if (isServer) then {
 	LSdeleter = compile preProcessFileLineNumbers "LSpawner\LSdeleter.sqf";
 	execVM "LSpawner\Lootspawner.sqf";
 };
-
+//Intro video
+[] spawn {
+	["freq-arma3-v2.ogv", false] spawn BIS_fnc_titlecard;	
+	waitUntil {!(isNil "BIS_fnc_titlecard_finished")};
+	};
 
 //BUILD BIKE
 if (("ItemScraps" in magazines player)&&("ToolKit" in magazines player)) then{
