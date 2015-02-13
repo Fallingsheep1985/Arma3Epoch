@@ -81,4 +81,4 @@ expiresVehicle = "604800";  // expiration date in seconds for vehicles
 hiveAsync = true; // true = asynchronous hive calls (non blocking), false = synchronous hive calls (blocking)
 
 // Debug Related
-DEBUG_VEH = false; // DEBUG ONLY used to debug spawing of vehicles
+DEBUG_VEH = true; // DEBUG ONLY used to debug spawing of vehicles
