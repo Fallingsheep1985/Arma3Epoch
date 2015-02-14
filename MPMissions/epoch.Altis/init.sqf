@@ -24,19 +24,31 @@ BANNED_LIST = [
 //BTC Lift,cargo and fast rope
 _logistic = execVM "=BTC=_Logistic\=BTC=_logistic_Init.sqf";
 
+//Loadouts
+[] execVM "custom\loadout.sqf";
+
+//Deploy bike/chopper
+[] execVM "custom\deployvehicle.sqf";
 
 //Status Bar
 [] execVM "custom\fn_statusBar.sqf"; 
-
-// Welcome Credits
+//Monitor
+[] execVM "custom\debug_monitor.sqf";
+//Intro stuff
+//CAMERA INTRO
+[] execVM "custom\serverIntro.sqf";
+//WELCOME MESSAGES
 [] execVM "custom\welcome.sqf";
+//DIARY RULES ETC
+[] execVM "custom\briefing.sqf";
 
 //Admin Menu
 [] execVM "adminmenu\run.sqf";
 [] execVM "adminmenu\loop.sqf";
 
-//Loadouts
-[] execVM "custom\loadout.sqf";
+
+
+
 
 //Custom LOOT
 if (isServer) then {
@@ -44,29 +56,13 @@ if (isServer) then {
 	LSdeleter = compile preProcessFileLineNumbers "LSpawner\LSdeleter.sqf";
 	execVM "LSpawner\Lootspawner.sqf";
 };
-//Intro video
-[] spawn {
-	["freq-arma3-v2.ogv", false] spawn BIS_fnc_titlecard;	
-	waitUntil {!(isNil "BIS_fnc_titlecard_finished")};
-	};
 
-//BUILD BIKE
-if (("ItemScraps" in magazines player)&&("ToolKit" in magazines player)) then{
-	act = player addaction [("<t color=""#0074E8"">" + ("Build Bike") +"</t>"),"custom\Bike.sqf","",5,false,true,"",""];
-};
-//BUILD CHOPPER
-if (("ItemScraps" in magazines player)&&("jerrycan_epoch" in magazines player)&&("CircuitParts" in magazines player)&&("VehicleRepair" in magazines player)) then {
-	act = player addaction [("<t color=""#0074E8"">" + ("Build Chopper") +"</t>"),"custom\chopper.sqf","",5,false,true,"",""];
-};
-//PACK BIKE
-_target = cursorTarget;
-_isbike = _target isKindOf "ebike_epoch";
-if (_isbike) then{
-	player addaction [("<t color=""#0074E8"">" + ("PackBike") +"</t>"),"custom\packbike2.sqf","",5,false,true,"",""];
-};
 //SEM Missions
-if(hasInterface)then{execVM "semClient.sqf"};
+if(hasInterface)then{execVM "custom\semClient.sqf"};
 
+if (isServer) then {
+	[] ExecVM "\VEMF\init.sqf";
+};
 //VEMF Missions
 if (!isDedicated) then {
 	"VEMFChatMsg" addPublicVariableEventHandler {
