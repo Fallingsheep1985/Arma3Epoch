@@ -28,7 +28,7 @@ _logistic = execVM "=BTC=_Logistic\=BTC=_logistic_Init.sqf";
 [] execVM "custom\loadout.sqf";
 
 //Deploy bike/chopper
-[] execVM "custom\deployvehicle.sqf";
+[] execVM "deploy\deployvehicle.sqf";
 
 //Status Bar
 [] execVM "custom\fn_statusBar.sqf"; 
