@@ -10,5 +10,5 @@ if (("ItemScraps" in magazines player)&&("jerrycan_epoch" in magazines player)&&
 _target = cursorTarget;
 _isbike = _target isKindOf "ebike_epoch";
 if (_isbike) then{
-	player addaction [("<t color=""#0074E8"">" + ("PackBike") +"</t>"),"custom\packbike2.sqf","",5,false,true,"",""];
+	act = player addaction [("<t color=""#0074E8"">" + ("PackBike") +"</t>"),"custom\packbike2.sqf","",5,false,true,"",""];
 };
