@@ -17,11 +17,6 @@ _logistic = execVM "=BTC=_Logistic\=BTC=_logistic_Init.sqf";
 //DIARY RULES ETC
 [] execVM "custom\briefing.sqf";
 
-//Admin Menu
-/*
-[] execVM "adminmenu\run.sqf";
-[] execVM "adminmenu\loop.sqf";
-*/
 CIVILIAN setfriend [RESISTANCE, 0];
 RESISTANCE setFriend [CIVILIAN, 0];
 //NAMETAGS
@@ -32,8 +27,6 @@ if (isServer) then {
 	fn_getBuildingstospawnLoot = compile preProcessFileLineNumbers "LSpawner\fn_LSgetBuildingstospawnLoot.sqf"; 
 	LSdeleter = compile preProcessFileLineNumbers "LSpawner\LSdeleter.sqf";
 	execVM "LSpawner\Lootspawner.sqf";
-	//spawn more loot!
-	[]spawn EPOCH_server_spawnBoatLoot2;
 };
 
 //SEM Missions
