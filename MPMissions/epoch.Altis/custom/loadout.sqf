@@ -6,7 +6,7 @@ if (!isServer) then {
 	while {true} do {
 		_player = player;
 		player addEventHandler ["Respawn", {
-			if (getPlayerUID player in ["76561198087015545","0","0"]) then {
+			if (getPlayerUID player in MASTERADMIN_LIST) then {
 				player addWeapon "srifle_EBR_F";
 				player addWeapon "hgun_Pistol_heavy_01_F";
 				player addWeapon "RPG32_F";
