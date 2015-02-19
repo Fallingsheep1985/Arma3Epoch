@@ -5,8 +5,7 @@ _logistic = execVM "=BTC=_Logistic\=BTC=_logistic_Init.sqf";
 //Loadouts
 [] execVM "custom\loadout.sqf";
 
-//Deploy bike/chopper
-[] execVM "custom\deployvehicle.sqf";
+
 
 //Status Bar
 [] execVM "custom\fn_statusBar.sqf"; 
@@ -56,4 +55,18 @@ if (!isDedicated) then {
 		] spawn BIS_fnc_typeText2;
 		VEMFChatMsg = nil;
 	};
+};
+
+//Created by - Fallingsheep
+//Special thanks - infistar for vehicle spawn code
+
+//BUILD BIKE
+if (("ItemScraps" in magazines player)&&("VehicleRepair" in magazines player)) then{
+    act = player addaction [("<t color=""#0074E8"">" + ("Build Bike") +"</t>"),"deploy\deploybike.sqf","",5,false,true,"",""];
+};
+//PACK BIKE
+_target = cursorTarget;
+_isbike = _target isKindOf "ebike_epoch";
+if (_isbike) then{
+    act = player addaction [("<t color=""#0074E8"">" + ("PackBike") +"</t>"),"deploy\packbike.sqf","",5,false,true,"",""];
 };
