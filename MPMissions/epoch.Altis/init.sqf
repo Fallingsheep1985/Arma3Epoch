@@ -1,12 +1,8 @@
 
 //BTC Lift,cargo and fast rope
 _logistic = execVM "=BTC=_Logistic\=BTC=_logistic_Init.sqf";
-
 //Loadouts
 [] execVM "custom\loadout.sqf";
-
-
-
 //Status Bar
 [] execVM "custom\fn_statusBar.sqf"; 
 //Intro stuff
@@ -22,7 +18,7 @@ RESISTANCE setFriend [CIVILIAN, 0];
 //NAMETAGS
 [] execVM "custom\Nametags.sqf";
 
-//Custom LOOT
+//Custom LOOT (arma2 style)
 if (isServer) then {
 	fn_getBuildingstospawnLoot = compile preProcessFileLineNumbers "LSpawner\fn_LSgetBuildingstospawnLoot.sqf"; 
 	LSdeleter = compile preProcessFileLineNumbers "LSpawner\LSdeleter.sqf";
@@ -32,10 +28,10 @@ if (isServer) then {
 //SEM Missions
 if(hasInterface)then{execVM "custom\semClient.sqf"};
 
+//VEMF Missions
 if (isServer) then {
 	[] ExecVM "\VEMF\init.sqf";
 };
-//VEMF Missions
 if (!isDedicated) then {
 	"VEMFChatMsg" addPublicVariableEventHandler {
 		systemChat ((_this select 1) select 0);
@@ -49,9 +45,6 @@ if (!isDedicated) then {
 		VEMFChatMsg = nil;
 	};
 };
-
-//Created by - Fallingsheep
-//Special thanks - infistar for vehicle spawn code
 
 //BUILD BIKE
 if (("ItemScraps" in magazines player)&&("VehicleRepair" in magazines player)) then{
