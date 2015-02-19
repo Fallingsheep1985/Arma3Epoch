@@ -3,7 +3,6 @@
 	//Special thanks - infistar
   
  if (("ItemScraps" in magazines player)&&("jerrycan_epoch" in magazines player)&&("CircuitParts" in magazines player)&&("VehicleRepair" in magazines player)) then {
-		if ("ToolKit" in magazines player) then{
 
 		player playActionNow "Medic"; // play build animation
 		sleep 3; //wait 3 seconds
@@ -53,8 +52,6 @@
 		if (!isNil 'EPOCH_server_save_vehicle') then {_vehObj call EPOCH_server_save_vehicle}; 
 		if (!isNil 'EPX_server_save_vehicle') then {_vehObj call EPX_server_save_vehicle;};
 			cutText [format["You built a Chopper."], "PLAIN DOWN"];
-	} else {
-		SystemChat "You need a Toolkit to build a Chopper."; 
 	};	
 } else {
 	SystemChat "You need Scrap, CircutParts, A Jerrycan and Vehicle Repair items to build a Chopper."; 

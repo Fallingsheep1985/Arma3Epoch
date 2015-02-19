@@ -68,5 +68,15 @@ if (("ItemScraps" in magazines player)&&("VehicleRepair" in magazines player)) t
 _target = cursorTarget;
 _isbike = _target isKindOf "ebike_epoch";
 if (_isbike) then{
-    act = player addaction [("<t color=""#0074E8"">" + ("PackBike") +"</t>"),"deploy\packbike.sqf","",5,false,true,"",""];
+    act = player addaction [("<t color=""#0074E8"">" + ("Pack Bike") +"</t>"),"deploy\packbike.sqf","",5,false,true,"",""];
+};
+//BUILD CHOPPER
+ if (("ItemScraps" in magazines player)&&("jerrycan_epoch" in magazines player)&&("CircuitParts" in magazines player)&&("VehicleRepair" in magazines player)) then {
+    act = player addaction [("<t color=""#0074E8"">" + ("Build Chopper") +"</t>"),"deploy\deploychopper.sqf","",5,false,true,"",""];
+};
+//PACK CHOPPER
+_target = cursorTarget;
+_isbike = _target isKindOf "B_Heli_Light_01_EPOCH";
+if (_isbike) then{
+    act = player addaction [("<t color=""#0074E8"">" + ("Pack Chopper") +"</t>"),"deploy\packchopper.sqf","",5,false,true,"",""];
 };
