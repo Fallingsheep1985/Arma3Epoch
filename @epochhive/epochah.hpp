@@ -1,6 +1,6 @@
 // Anti Hack
 antihack_Enabled = false; // built-in Anti-Hack
-antihack_cfgPatchesCheck = true; // cfgPatches (AddOn Check)
+antihack_cfgPatchesCheck = false; // cfgPatches (AddOn Check)
 antihack_PVSPrefix = "EPAH_"; // used to help whitelist pveh variables in BE without BEC and watchdog, leave blank to use no prefix.
 antihack_cfgPatchesCfg[] = {0}; // 0 == BAN - 1 = LOG
 antihack_ahInitAuthCfg[] = {0,90}; // 0 == BAN - 1 = LOG, 90 = ban or log if anti hack is not started in 90 seconds

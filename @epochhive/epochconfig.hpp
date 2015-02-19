@@ -15,9 +15,9 @@ showEarthQuakes = true; // used to show locations of earthquakes
 showShippingContainers = true; // used to show locations of shipping containers
 
 // Antagonists
-antagonistChanceTrash = 0.03; //3% chance when player loot a trash object
+antagonistChanceTrash = 0.05; //3% chance when player loot a trash object
 antagonistChancePDeath = 0.25; //25% chance when player was killed from a other player (selfkill doesn't count)
-antagonistChanceLoot = 0.03; //3% chance when player click "SEARCH" on a loot object
+antagonistChanceLoot = 0.05; //3% chance when player click "SEARCH" on a loot object
 
 // Player Related
 cloneCost = 100; // debt incurred on player death
@@ -81,4 +81,4 @@ expiresVehicle = "604800";  // expiration date in seconds for vehicles
 hiveAsync = true; // true = asynchronous hive calls (non blocking), false = synchronous hive calls (blocking)
 
 // Debug Related
-DEBUG_VEH = true; // DEBUG ONLY used to debug spawing of vehicles
+DEBUG_VEH = false; // DEBUG ONLY used to debug spawing of vehicles
